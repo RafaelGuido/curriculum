@@ -396,6 +396,36 @@ img {
     transition: .3s;
 }
 
+.button__icon-home {
+    font-size: 1.25rem;
+    margin-left: var(--mb-0-5);
+    transition: .3s;
+}
+
+.button--flex:hover .button__icon-home {
+    transform: translateX(.25rem)
+}
+
+.button__icon-dwn {
+    font-size: 1.25rem;
+    margin-left: var(--mb-0-5);
+    transition: .3s;
+}
+
+.button--flex:hover .button__icon-dwn {
+    transform: translatey(.25rem)
+}
+
+.button__icon-msg {
+    font-size: 1.25rem;
+    margin-left: var(--mb-0-5);
+    transition: .3s;
+}
+
+.button--flex:hover .button__icon-msg {
+    transform: translateX(.25rem)
+}
+
 .button--white {
     color: black;
     background-color: var(--first-color-lighter);
