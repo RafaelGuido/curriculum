@@ -956,11 +956,11 @@
                     
                     <div class="contact__content">
                         <label for="" class="contact__label">Mensagem</label>
-                        <textarea id="myText" cols="0" rows="7" class="contact__input" style="resize: vertical"></textarea>
+                        <textarea id="myText" maxlength="500" cols="0" rows="7" class="contact__input" style="resize: vertical"></textarea>
                     </div>
 
                     <div>
-                        <a onclick="sendMail(); return false" class="button button--flex">
+                        <a onclick="sendMail(); return false" style="cursor: pointer;" class="button button--flex">
                             Enviar mensagem
                             <i class="uil uil-message button__icon-msg"></i>
                         </a>
