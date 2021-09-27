@@ -935,6 +935,7 @@ img {
 .testimonial__data {
     justify-content: space-between;
     margin-bottom: var(--mb-1);
+    cursor: default;
 }
 
 .testimonial__img {
@@ -956,6 +957,7 @@ img {
 
 .testimonial__description {
     margin-bottom: var(--mb-2-5);
+    cursor: grab;
 }
 
 .testimonial__icon-star {
