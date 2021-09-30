@@ -592,9 +592,9 @@ img {
     width: 70%;
 }
 
-.skills__node {
+/* .skills__node {
     width: 60%;
-}
+} */
 
 .skills__php {
     width: 30%;
@@ -612,7 +612,7 @@ img {
     width: 80%;
 }
 
-.skills__oracle {
+.skills__oracledb {
     width: 80%;
 }
 
