@@ -164,6 +164,10 @@ img {
     color: var(--first-color-alt);
 }
 
+.no_color_href {
+    color: inherit;
+}
+
 /*==================== LAYOUT ====================*/
 .container {
     max-width: 768px;
