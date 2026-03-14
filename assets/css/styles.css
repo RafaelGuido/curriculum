@@ -117,11 +117,13 @@ body {
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 h1, h2, h3, h4 {
     color: var(--title-color);
     font-weight: var(--font-semi-bold);
+    transition: color 0.4s ease;
 }
 
 ul {
@@ -188,6 +190,24 @@ img {
     left: 0;
     z-index: var(--z-fixed);
     background-color: var(--body-color);
+    transition: background-color 0.4s ease, box-shadow 0.3s ease;
+}
+
+.scroll-header {
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+}
+
+@media screen and (min-width: 768px) {
+    .scroll-header {
+        background-color: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+    }
+
+    body.dark-theme .scroll-header {
+        background-color: hsla(var(--hue-color), 28%, 12%, 0.85);
+    }
 }
 
 /*==================== NAV ====================*/
@@ -228,7 +248,10 @@ img {
         box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
         border-radius: 1.5rem 1.5rem 0 0;
         transition: .3s;
-    }    
+    }
+    .nav__link::after {
+        display: none;
+    }
 }
 
 .nav__list {
@@ -272,14 +295,36 @@ img {
 }
 
 /* Active link */
-.active-link{
+.nav__link {
+    position: relative;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--first-color);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.active-link {
     color: var(--first-color);
 }
 
-/* Change background header */
-.scroll-header {
-    box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+.active-link::after {
+    width: 70%;
+    left: 15%;
 }
+
+.nav__link:hover::after {
+    width: 70%;
+    left: 15%;
+}
+
+/* Change background header */
 
 /*==================== HOME ====================*/
 .home__container {
@@ -305,8 +350,32 @@ img {
 
 .home__social-icon:hover {
     color: var(--first-color-alt);
-    animation-duration: 0.3s;
-    animation-name: shake;
+}
+
+/* Tooltip for social icons */
+.home__social-icon[title] {
+    position: relative;
+}
+
+.home__social-icon[title]::after {
+    content: attr(title);
+    position: absolute;
+    left: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--first-color);
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: var(--smaller-font-size);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.home__social-icon[title]:hover::after {
+    opacity: 1;
 }
 
 /* ANIMATIONS ICONS */
@@ -351,11 +420,12 @@ img {
     white-space: nowrap;
     border-right: 2px solid var(--first-color);
     width: 0;
+    max-width: max-content;
     animation: typing 2.5s steps(25) 0.5s forwards, blink 0.7s step-end infinite;
 }
 
 @keyframes typing {
-    to { width: 100%; }
+    to { width: 24ch; }
 }
 
 @keyframes blink {

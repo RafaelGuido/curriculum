@@ -132,16 +132,22 @@ const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
     const scrollY = window.pageYOffset
+    const isAtBottom = (window.innerHeight + scrollY) >= document.body.scrollHeight - 50
 
     sections.forEach(current =>{
         const sectionHeight = current.offsetHeight
         const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
+        const sectionId = current.getAttribute('id')
+        const link = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+        if(!link) return
+
+        if(isAtBottom && sectionId === 'contact'){
+            link.classList.add('active-link')
+        } else if(!isAtBottom && scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            link.classList.add('active-link')
+        } else {
+            link.classList.remove('active-link')
         }
     })
 }
