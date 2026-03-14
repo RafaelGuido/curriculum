@@ -342,10 +342,24 @@ img {
 }
 
 .home__subtitle {
-    font: var(--h3-font-size);
+    font-size: var(--h3-font-size);
     color: var(--text-color);
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-0-75);
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--first-color);
+    width: 0;
+    animation: typing 2.5s steps(25) 0.5s forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
 }
 
 .home__description {
@@ -763,7 +777,9 @@ img {
 }
 
 .services__content:hover {
-    box-shadow: 0 8px 12px rgba(0, 0, 0, .15);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    border-bottom: 3px solid var(--first-color);
+    transform: translateY(-5px);
 }
 
 .services__icon {
@@ -1071,6 +1087,28 @@ img {
 
 .footer__title, .footer__subtitle, .footer__link, .footer__social, .footer__copy {
     color: var(--title-color);
+}
+
+/*========== SCROLL REVEAL ANIMATIONS ==========*/
+.section__title,
+.section__subtitle,
+.home__content,
+.about__container,
+.skills__container,
+.qualification__container,
+.services__container,
+.portfolio__container,
+.testimonial__container,
+.contact__container,
+.project__bg {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-reveal {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /*========== SCROLL UP ==========*/

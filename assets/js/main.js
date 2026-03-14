@@ -199,6 +199,24 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
+/*==================== SCROLL REVEAL ANIMATION ====================*/
+const revealElements = document.querySelectorAll(
+    '.section__title, .section__subtitle, .home__content, .about__container, .skills__container, .qualification__container, .services__container, .portfolio__container, .testimonial__container, .contact__container, .project__bg'
+)
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.classList.add('scroll-reveal')
+            }, index * 100)
+            revealObserver.unobserve(entry.target)
+        }
+    })
+}, { threshold: 0.1 })
+
+revealElements.forEach(el => revealObserver.observe(el))
+
 // E-mail
 function sendMail() {
     var link = "mailto:rafael@toccolini.com.br"
