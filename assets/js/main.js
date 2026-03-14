@@ -201,8 +201,10 @@ themeButton.addEventListener('click', () => {
 
 /*==================== SCROLL REVEAL ANIMATION ====================*/
 const revealElements = document.querySelectorAll(
-    '.section__title, .section__subtitle, .home__content, .about__container, .skills__container, .qualification__container, .services__container, .portfolio__container, .testimonial__container, .contact__container, .project__bg'
+    '.section__title, .section__subtitle, .home__content, .about__container, .skills__container, .qualification__container, .portfolio__container, .testimonial__container, .contact__container, .project__bg'
 )
+
+const revealFadeOnly = document.querySelectorAll('.services__container')
 
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
@@ -216,6 +218,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 })
 
 revealElements.forEach(el => revealObserver.observe(el))
+revealFadeOnly.forEach(el => revealObserver.observe(el))
 
 // E-mail
 function sendMail() {
