@@ -22,21 +22,21 @@
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <title>Rafael | Desenvolvedor</title>
-    <meta name="description" content="Rafael Toccolini - Desenvolvedor Full-Stack com mais de 6 anos de experiência em Java, Python, JavaScript e TypeScript. Brasília/DF, Brasil.">
+    <title data-i18n="meta.title">Rafael | Desenvolvedor</title>
+    <meta name="description" data-i18n-content="meta.description" content="Rafael Toccolini - Desenvolvedor Full-Stack com mais de 6 anos de experiência em Java, Python, JavaScript e TypeScript. Brasília/DF, Brasil.">
     <meta name="keywords" content="Rafael Toccolini, Desenvolvedor, Full-Stack, Java, Python, JavaScript, TypeScript, Brasília">
     <meta name="author" content="Rafael Toccolini">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Rafael | Desenvolvedor">
-    <meta property="og:description" content="Desenvolvedor Full-Stack com mais de 6 anos de experiência em Java, Python, JavaScript e TypeScript.">
+    <meta property="og:title" data-i18n-content="meta.title" content="Rafael | Desenvolvedor">
+    <meta property="og:description" data-i18n-content="meta.shortDescription" content="Desenvolvedor Full-Stack com mais de 6 anos de experiência em Java, Python, JavaScript e TypeScript.">
     <meta property="og:image" content="assets/img/perfil.png">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rafael | Desenvolvedor">
-    <meta name="twitter:description" content="Desenvolvedor Full-Stack com mais de 6 anos de experiência em Java, Python, JavaScript e TypeScript.">
+    <meta name="twitter:title" data-i18n-content="meta.title" content="Rafael | Desenvolvedor">
+    <meta name="twitter:description" data-i18n-content="meta.shortDescription" content="Desenvolvedor Full-Stack com mais de 6 anos de experiência em Java, Python, JavaScript e TypeScript.">
     <meta name="twitter:image" content="assets/img/perfil.png">
 </head>
 
@@ -53,42 +53,42 @@
                 <ul class="nav__list grid">
                     <li class="nav__item">
                         <a href="#home" class="nav__link active-link">
-                            <i class="uil uil-estate nav__icon"></i> Início
+                            <i class="uil uil-estate nav__icon"></i> <span data-i18n="nav.home">Início</span>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#about" class="nav__link">
-                            <i class="uil uil-user nav__icon"></i> Sobre
+                            <i class="uil uil-user nav__icon"></i> <span data-i18n="nav.about">Sobre</span>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#skills" class="nav__link">
-                            <i class="uil uil-file-alt nav__icon"></i> Habilidades
+                            <i class="uil uil-file-alt nav__icon"></i> <span data-i18n="nav.skills">Habilidades</span>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#journey" class="nav__link">
-                            <i class="uil uil-star nav__icon"></i> Jornada
+                            <i class="uil uil-star nav__icon"></i> <span data-i18n="nav.journey">Jornada</span>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#services" class="nav__link">
-                            <i class="uil uil-briefcase-alt nav__icon"></i> Serviços
+                            <i class="uil uil-briefcase-alt nav__icon"></i> <span data-i18n="nav.services">Serviços</span>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#portfolio" class="nav__link">
-                            <i class="uil uil-scenery nav__icon"></i> Portfólio
+                            <i class="uil uil-scenery nav__icon"></i> <span data-i18n="nav.portfolio">Portfólio</span>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#testimonial" class="nav__link">
-                            <i class="uil uil-smile-beam nav__icon"></i> Recomendações
+                            <i class="uil uil-smile-beam nav__icon"></i> <span data-i18n="nav.testimonial">Recomendações</span>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#contact" class="nav__link">
-                            <i class="uil uil-message nav__icon"></i> Contato
+                            <i class="uil uil-message nav__icon"></i> <span data-i18n="nav.contact">Contato</span>
                         </a>
                     </li>
                 </ul>
@@ -96,6 +96,11 @@
             </div>
 
             <div class="nav__btns">
+                <!-- LANGUAGE CHANGE BUTTON -->
+                <button class="change-lang" id="lang-button" aria-label="Mudar idioma / Change language">
+                    <span data-lang="pt">PT</span> | <span data-lang="en">EN</span>
+                </button>
+
                 <!-- THEME CHANGE BUTTON -->
                 <i class="uil uil-moon change-theme" id="theme-button"></i>
 
@@ -152,10 +157,10 @@
 
                     <div class="home__data">
                         <h1 class="home__title">Rafael</h1>
-                        <h3 class="home__subtitle">Desenvolvedor Full-Stack</h3>
-                        <p class="home__description">Sou um desenvolvedor de 26 anos, nascido em Brasília, amante de tecnologia e sempre em busca de evolução, tanto pessoal quanto profissional.</p>
+                        <h3 class="home__subtitle" data-i18n="role">Desenvolvedor Full-Stack</h3>
+                        <p class="home__description" data-i18n="home.description">Sou um desenvolvedor de 26 anos, nascido em Brasília, amante de tecnologia e sempre em busca de evolução, tanto pessoal quanto profissional.</p>
                         <a href="#contact" class="button button--flex">
-                            Fale comigo <i class="uil uil-message button__icon-home"></i>
+                            <span data-i18n="home.cta">Fale comigo</span> <i class="uil uil-message button__icon-home"></i>
                         </a>
                     </div>
 
@@ -167,36 +172,32 @@
 
         <!--==================== ABOUT ====================-->
         <section class="about section" id="about">
-            <h2 class="section__title">Sobre mim</h2>
-            <span class="section__subtitle">Minha introdução</span>
+            <h2 class="section__title" data-i18n="about.title">Sobre mim</h2>
+            <span class="section__subtitle" data-i18n="about.subtitle">Minha introdução</span>
 
             <div class="about__container container grid">
-                <img src="assets/img/about.png" alt="Foto de Rafael Toccolini" loading="lazy" class="about__img">
+                <img src="assets/img/about.png" alt="Foto de Rafael Toccolini" data-i18n-alt="about.imgAlt" loading="lazy" class="about__img">
 
                 <div class="about__data">
-                    <p class="about__description">Cientista da Computação, especialista em Inteligência Artificial, apaixonado por video-games, esportes e pela Gabi!</p>
+                    <p class="about__description" data-i18n="about.description">Cientista da Computação, especialista em Inteligência Artificial, apaixonado por video-games, esportes e pela Gabi!</p>
                     <div class="about__info">
                         <div>
                             <span class="about__info-title">3+</span>
-                            <span class="about__info-name">Empresas <br> trabalhadas</span>
+                            <span class="about__info-name" data-i18n="about.companies">Empresas <br> trabalhadas</span>
                         </div>
                         <div>
                             <span class="about__info-title">6+</span>
-                            <span class="about__info-name">Anos de <br> experiência</span>
+                            <span class="about__info-name" data-i18n="about.years">Anos de <br> experiência</span>
                         </div>
                         <div>
                             <span class="about__info-title">9+</span>
-                            <span class="about__info-name">Projetos <br> completos</span>
+                            <span class="about__info-name" data-i18n="about.projects">Projetos <br> completos</span>
                         </div>
                     </div>
 
                     <div class="about__buttons">
-                        <a download="" href="assets/pdf/Rafael_Toccolini_CV.pdf" class="button button--flex">
-                            CV em PT-BR<i class="uil uil-file-download-alt button__icon-dwn"></i>
-                        </a>
-                        &nbsp;
-                        <a download="" href="assets/pdf/Rafael_Toccolini_CV_Ingles.pdf" class="button button--flex">
-                            CV in EN-US<i class="uil uil-file-download-alt button__icon-dwn"></i>
+                        <a download="" href="assets/pdf/Rafael_Toccolini_CV.pdf" data-i18n-href="about.cvFile" class="button button--flex">
+                            <span data-i18n="about.cv">Baixar CV</span><i class="uil uil-file-download-alt button__icon-dwn"></i>
                         </a>
                     </div>
                 </div>
@@ -206,8 +207,8 @@
 
         <!--==================== SKILLS ====================-->
         <section class="skills section" id="skills">
-            <h2 class="section__title">Habilidades</h2>
-            <span class="section__subtitle">Tecnologias e mais</span>
+            <h2 class="section__title" data-i18n="skills.title">Habilidades</h2>
+            <span class="section__subtitle" data-i18n="skills.subtitle">Tecnologias e mais</span>
 
             <div class="skills__container container grid">
                 <div>
@@ -218,8 +219,8 @@
                             <i class="uil uil-brackets-curly skills__icon"></i>
 
                             <div>
-                                <h1 class="skills__title">Desenvolvedor Frontend</h1>
-                                <span class="skills__subtitle">Há mais de 5 anos</span>
+                                <h1 class="skills__title" data-i18n="skills.frontend.title">Desenvolvedor Frontend</h1>
+                                <span class="skills__subtitle" data-i18n="skills.frontend.subtitle">Há mais de 5 anos</span>
                             </div>
 
                             <i class="uil uil-angle-down skills__arrow"></i>
@@ -250,8 +251,8 @@
                             <i class="uil uil-server-network skills__icon"></i>
 
                             <div>
-                                <h1 class="skills__title">Desenvolvedor Backend</h1>
-                                <span class="skills__subtitle">Há mais de 5 anos</span>
+                                <h1 class="skills__title" data-i18n="skills.backend.title">Desenvolvedor Backend</h1>
+                                <span class="skills__subtitle" data-i18n="skills.backend.subtitle">Há mais de 5 anos</span>
                             </div>
 
                             <i class="uil uil-angle-down skills__arrow"></i>
@@ -282,8 +283,8 @@
                             <i class="uil uil-wrench skills__icon"></i>
 
                             <div>
-                                <h1 class="skills__title">Ferramentas</h1>
-                                <span class="skills__subtitle">De uso diário</span>
+                                <h1 class="skills__title" data-i18n="skills.tools.title">Ferramentas</h1>
+                                <span class="skills__subtitle" data-i18n="skills.tools.subtitle">De uso diário</span>
                             </div>
 
                             <i class="uil uil-angle-down skills__arrow"></i>
@@ -329,8 +330,8 @@
                             <i class="uil uil-brain skills__icon"></i>
 
                             <div>
-                                <h1 class="skills__title">Conhecimento</h1>
-                                <span class="skills__subtitle">Para uso pessoal e profissional</span>
+                                <h1 class="skills__title" data-i18n="skills.knowledge.title">Conhecimento</h1>
+                                <span class="skills__subtitle" data-i18n="skills.knowledge.subtitle">Para uso pessoal e profissional</span>
                             </div>
 
                             <i class="uil uil-angle-down skills__arrow"></i>
@@ -339,16 +340,16 @@
                             <div class="skills__data">
 
                                 <div class="skills__titles">
-                                    <h3 class="skills__name">Inteligência Artificial</h3>
+                                    <h3 class="skills__name" data-i18n="skills.ai">Inteligência Artificial</h3>
                                 </div>
                                 <div class="skills__titles">
-                                    <h3 class="skills__name">Comunicação</h3>
+                                    <h3 class="skills__name" data-i18n="skills.communication">Comunicação</h3>
                                 </div>
                                 <div class="skills__titles">
-                                    <h3 class="skills__name">Escrita/Oratória</h3>
+                                    <h3 class="skills__name" data-i18n="skills.speaking">Escrita/Oratória</h3>
                                 </div>
                                 <div class="skills__titles">
-                                    <h3 class="skills__name">Inglês</h3>
+                                    <h3 class="skills__name" data-i18n="skills.english">Inglês</h3>
                                 </div>
 
                             </div>
@@ -361,19 +362,19 @@
 
         <!--==================== QUALIFICATION ====================-->
         <section class="qualification section" id="journey">
-            <h2 class="section__title">Jornada</h2>
-            <span class="section__subtitle">Minha jornada acadêmica e profissional</span>
+            <h2 class="section__title" data-i18n="journey.title">Jornada</h2>
+            <span class="section__subtitle" data-i18n="journey.subtitle">Minha jornada acadêmica e profissional</span>
             
             <div class="qualification__container container">
                 <div class="qualification__tabs">
                     <div class="qualification__button button--flex qualification__active" data-target='#educacao'>
                         <i class="uil uil-graduation-cap qualification__icon"></i>
-                        Educação
+                        <span data-i18n="journey.education">Educação</span>
                     </div>
                     
                     <div class="qualification__button button--flex" data-target="#trabalho">
                         <i class="uil uil-briefcase-alt qualification__icon"></i>
-                        Trabalho
+                        <span data-i18n="journey.work">Trabalho</span>
                     </div>
                 </div>
                 
@@ -392,7 +393,7 @@
                             </div>
 
                             <div>
-                                <h3 class="qualification__title">IA para devs (Pós-Graduação)</h3>
+                                <h3 class="qualification__title" data-i18n="journey.postgrad">IA para devs (Pós-Graduação)</h3>
                                 <span class="qualification__subtitle">FIAP/Alura</span>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt qua">
@@ -400,7 +401,7 @@
                                     </i>
                                 </div>
                                 <div class="qualification__locale">
-                                    <i class="uil uil-map-marker-alt">
+                                    <i class="uil uil-map-marker-alt" data-i18n="journey.hybrid">
                                         Brasília/DF - Brasil (Híbrido)
                                     </i>
                                 </div>
@@ -410,7 +411,7 @@
                         <!--==================== QUALIFICATION 2 ====================-->
                         <div class="qualification__data">
                             <div>
-                                <h3 class="qualification__title">Ciência da Computação (Graduação)</h3>
+                                <h3 class="qualification__title" data-i18n="journey.degree">Ciência da Computação (Graduação)</h3>
                                 <span class="qualification__subtitle">Centro Universitário de Brasília - UniCEUB</span>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt qua">
@@ -418,7 +419,7 @@
                                     </i>
                                 </div>
                                 <div class="qualification__locale">
-                                    <i class="uil uil-map-marker-alt">
+                                    <i class="uil uil-map-marker-alt" data-i18n="journey.onsite">
                                         Brasília/DF - Brasil (Presencial)
                                     </i>
                                 </div>
@@ -440,7 +441,7 @@
                             </div>
 
                             <div>
-                                <h3 class="qualification__title">Ensino Médio</h3>
+                                <h3 class="qualification__title" data-i18n="journey.highschool">Ensino Médio</h3>
                                 <span class="qualification__subtitle">CIMAN</span>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt qua">
@@ -448,7 +449,7 @@
                                     </i>
                                 </div>
                                 <div class="qualification__locale">
-                                    <i class="uil uil-map-marker-alt">
+                                    <i class="uil uil-map-marker-alt" data-i18n="journey.onsite">
                                         Brasília/DF - Brasil (Presencial)
                                     </i>
                                 </div>
@@ -459,7 +460,7 @@
                         <div class="qualification__data">
 
                             <div>
-                                <h3 class="qualification__title">Inglês</h3>
+                                <h3 class="qualification__title" data-i18n="journey.english">Inglês</h3>
                                 <span class="qualification__subtitle">Cultura Inglesa</span>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt qua">
@@ -467,7 +468,7 @@
                                     </i>
                                 </div>
                                 <div class="qualification__locale">
-                                    <i class="uil uil-map-marker-alt">
+                                    <i class="uil uil-map-marker-alt" data-i18n="journey.onsite">
                                         Brasília/DF - Brasil (Presencial)
                                     </i>
                                 </div>
@@ -485,15 +486,15 @@
                         <!--==================== QUALIFICATION 1 ====================-->
                         <div class="qualification__data">
                             <div>
-                                <h3 class="qualification__title">Desenvolvedor de Aplicações Pleno</h3>
+                                <h3 class="qualification__title" data-i18n="journey.job1">Desenvolvedor de Aplicações Pleno</h3>
                                 <span class="qualification__subtitle">Datainfo</span>
                                 <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt qua">
+                                    <i class="uil uil-calendar-alt qua" data-i18n="journey.current">
                                         2021 - Momento
                                     </i>
                                 </div>
                                 <div class="qualification__locale">
-                                    <i class="uil uil-map-marker-alt">
+                                    <i class="uil uil-map-marker-alt" data-i18n="journey.remote">
                                         Brasília/DF - Brasil (Remoto)
                                     </i>
                                 </div>
@@ -515,7 +516,7 @@
                             </div>
 
                             <div>
-                                <h3 class="qualification__title">Programador Analista Junior</h3>
+                                <h3 class="qualification__title" data-i18n="journey.job2">Programador Analista Junior</h3>
                                 <span class="qualification__subtitle">Stefanini IT Solutions</span>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt qua">
@@ -523,7 +524,7 @@
                                     </i>
                                 </div>
                                 <div class="qualification__locale">
-                                    <i class="uil uil-map-marker-alt">
+                                    <i class="uil uil-map-marker-alt" data-i18n="journey.hybrid">
                                         Brasília/DF - Brasil (Híbrido)
                                     </i>
                                 </div>
@@ -533,7 +534,7 @@
                         <!--==================== QUALIFICATION 3 ====================-->
                         <div class="qualification__data">
                             <div>
-                                <h3 class="qualification__title">Estagiário de Auxiliar Administrativo</h3>
+                                <h3 class="qualification__title" data-i18n="journey.job3">Estagiário de Auxiliar Administrativo</h3>
                                 <span class="qualification__subtitle">Speed Way Assessoria Empresarial Ltda</span>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt qua">
@@ -541,7 +542,7 @@
                                     </i>
                                 </div>
                                 <div class="qualification__locale">
-                                    <i class="uil uil-map-marker-alt">
+                                    <i class="uil uil-map-marker-alt" data-i18n="journey.onsite">
                                         Brasília/DF - Brasil (Presencial)
                                     </i>
                                 </div>
@@ -560,34 +561,34 @@
 
         <!--==================== SERVICES ====================-->
         <section class="services section" id="services">
-            <h2 class="section__title">Serviços</h2>
-            <span class="section__subtitle">O que posso fazer por você</span>
+            <h2 class="section__title" data-i18n="services.title">Serviços</h2>
+            <span class="section__subtitle" data-i18n="services.subtitle">O que posso fazer por você</span>
             
             <div class="services__container container grid">
 
                 <!--==================== SERVICES 1 ====================-->
                 <div class="services__content">
                     <i class="uil uil-desktop services__icon"></i>
-                    <h3 class="services__title">Desenvolvedor <br> WEB</h3>
+                    <h3 class="services__title" data-i18n="services.web">Desenvolvedor <br> WEB</h3>
                     
                     <span class="button button--flex button--small button--link services__button">
-                        Ver mais 
+                        <span data-i18n="services.more">Ver mais</span> 
                         <i class="uil uil-arrow-right button__icon"></i>
                     </span>
                     
                     <div class="services__modal">
                         <div class="services__modal-content">
-                            <h4 class="services__modal-title">Desenvolvedor <br> WEB</h4>
+                            <h4 class="services__modal-title" data-i18n="services.web">Desenvolvedor <br> WEB</h4>
                             <i class="uil uil-times services__modal-close"></i>
                             
                             <ul class="services__modal-services grid">
                                 <li class="services__modal-service">
                                     <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Crio sites e sistemas para seu negócio.</p>
+                                    <p data-i18n="services.web1">Crio sites e sistemas para seu negócio.</p>
                                 </li>
                                 <li class="services__modal-service">
                                     <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Conheço e utilizo frameworks JS atuais, sempre com código limpo.</p>
+                                    <p data-i18n="services.web2">Conheço e utilizo frameworks JS atuais, sempre com código limpo.</p>
                                 </li>
                             </ul>
                         </div>
@@ -597,26 +598,26 @@
                 <!--==================== SERVICES 2 ====================-->
                 <div class="services__content">
                     <i class="uil uil-mobile-android services__icon"></i>
-                    <h3 class="services__title">Desenvolvedor <br> Mobile</h3>
+                    <h3 class="services__title" data-i18n="services.mobile">Desenvolvedor <br> Mobile</h3>
                     
                     <span class="button button--flex button--small button--link services__button">
-                        Ver mais 
+                        <span data-i18n="services.more">Ver mais</span> 
                         <i class="uil uil-arrow-right button__icon"></i>
                     </span>
                     
                     <div class="services__modal">
                         <div class="services__modal-content">
-                            <h4 class="services__modal-title">Desenvolvedor <br> Mobile</h4>
+                            <h4 class="services__modal-title" data-i18n="services.mobile">Desenvolvedor <br> Mobile</h4>
                             <i class="uil uil-times services__modal-close"></i>
                             
                             <ul class="services__modal-services grid">
                                 <li class="services__modal-service">
                                     <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Crio aplicativos para Android e IOS.</p>
+                                    <p data-i18n="services.mobile1">Crio aplicativos para Android e IOS.</p>
                                 </li>
                                 <li class="services__modal-service">
                                     <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Garanto a responsividade para todos os modelos de celulares.</p>
+                                    <p data-i18n="services.mobile2">Garanto a responsividade para todos os modelos de celulares.</p>
                                 </li>
                             </ul>
                         </div>
@@ -628,23 +629,23 @@
 
         <!--==================== PORTFOLIO ====================-->
         <section class="portfolio section" id="portfolio">
-            <h2 class="section__title">Portfólio</h2>
-            <span class="section__subtitle">Projetos concluídos</span>
+            <h2 class="section__title" data-i18n="portfolio.title">Portfólio</h2>
+            <span class="section__subtitle" data-i18n="portfolio.subtitle">Projetos concluídos</span>
             
             <div class="portfolio__container container swiper-container">
                 <div class="swiper-wrapper">
 
                     <!--==================== PORTFOLIO 1 ====================-->
                     <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/portfolio1.jpg" alt="Projeto M2A Consultoria" loading="lazy" class="portfolio__img">
+                        <img src="assets/img/portfolio1.jpg" alt="Projeto M2A Consultoria" data-i18n-alt="portfolio.m2a.alt" loading="lazy" class="portfolio__img">
                         
                         <div class="portfolio__data">
                             <h3 class="portfolio__title">M2A Consultoria</h3>
-                            <p class="portfolio__description">
+                            <p class="portfolio__description" data-i18n="portfolio.m2a.description">
                                 Construção de uma solução online onde os participantes selecionam os empresários que participarão do projeto e fornecerão as informações sobre a gestão de seu negócio por intermédio do preenchimento de um questionário.
                             </p>
                             <a href="https://github.com/RafaelGuido/M2A_front" target="_blank" rel="noopener noreferrer" class="button button--flex button--small portfolio__button">
-                                Visualizar
+                                <span data-i18n="portfolio.view">Visualizar</span>
                                 <i class="uil uil-arrow-right button__icon"></i>
                             </a>
                         </div>
@@ -652,17 +653,17 @@
 
                     <!--==================== PORTFOLIO 2 ====================-->
                     <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/portfolio2.jpg" alt="Projeto Siscovid" loading="lazy" class="portfolio__img">
+                        <img src="assets/img/portfolio2.jpg" alt="Projeto Siscovid" data-i18n-alt="portfolio.siscovid.alt" loading="lazy" class="portfolio__img">
                         
                         <div class="portfolio__data">
                             <h3 class="portfolio__title">Siscovid</h3>
-                            <p class="portfolio__description">
+                            <p class="portfolio__description" data-i18n="portfolio.siscovid.description">
                                 Sistema de IA para avaliar os sintomas do usuário 
                                 e indica recomendações médicas, além de "diagnosticar"
                                 algumas doenças.
                             </p>
                             <a href="https://gitlab.com/rafael.toccolini/siscovid" target="_blank" rel="noopener noreferrer" class="button button--flex button--small portfolio__button">
-                                Visualizar
+                                <span data-i18n="portfolio.view">Visualizar</span>
                                 <i class="uil uil-arrow-right button__icon"></i>
                             </a>
                         </div>
@@ -670,17 +671,17 @@
 
                     <!--==================== PORTFOLIO 3 ====================-->
                     <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/portfolio3.jpg" alt="Projeto Godofredo's Dungeon" loading="lazy" class="portfolio__img">
+                        <img src="assets/img/portfolio3.jpg" alt="Projeto Godofredo's Dungeon" data-i18n-alt="portfolio.godofredo.alt" loading="lazy" class="portfolio__img">
                         
                         <div class="portfolio__data">
                             <h3 class="portfolio__title">Godofredo's Dungeon</h3>
-                            <p class="portfolio__description">
+                            <p class="portfolio__description" data-i18n="portfolio.godofredo.description">
                                 O jogo se passa em um Grid 4x4, tendo a área ao redor do jogador iluminada pela luz de uma tocha portada pelo jogador. 
                                 O jogo não apresenta um fim nem é separado por fases, portanto não havendo condição para vitória, o jogador fica sempre 
                                 preso na dungeon que fica cada vez mais difícil com inimigos cada vez mais fortes no decorrer do tempo.
                             </p>
                             <a href="https://github.com/RafaelGuido/godofredos-dungeon" target="_blank" rel="noopener noreferrer" class="button button--flex button--small portfolio__button">
-                                Visualizar
+                                <span data-i18n="portfolio.view">Visualizar</span>
                                 <i class="uil uil-arrow-right button__icon"></i>
                             </a>
                         </div>
@@ -706,23 +707,23 @@
         <!--==================== PROJECT IN MIND ====================-->
         <section class="project section" id="project">
             <div style="text-align: center;">
-                <h2>Temporariamente sem agenda, novidades em breve!</h2>
+                <h2 data-i18n="project.unavailable">Temporariamente sem agenda, novidades em breve!</h2>
             </div>
             <div class="project__bg">
                 <div class="project__container container grid" style="opacity: 0.3;">
                     
                     <div class="project__data">
-                        <h2 class="project__title">Tem algum projeto em mente?</h2>
-                        <p class="project__description">
+                        <h2 class="project__title" data-i18n="project.title">Tem algum projeto em mente?</h2>
+                        <p class="project__description" data-i18n="project.description">
                             Me mande um e-mail agora e ganhe <b>10% de DESCONTO</b> para tirarmos do papel o seu novo projeto.
                         </p>
                         <a href="#contact" class="button button--flex button--white" style="pointer-events: none; cursor: default;">
-                            Mandar e-mail
+                            <span data-i18n="project.cta">Mandar e-mail</span>
                             <i class="uil uil-message project__icon button__icon"></i>
                         </a>
                     </div>
 
-                    <img src="assets/img/project.png" alt="Ilustração de projeto" loading="lazy" class="project__img">
+                    <img src="assets/img/project.png" alt="Ilustração de projeto" data-i18n-alt="project.imgAlt" loading="lazy" class="project__img">
 
                 </div>
             </div>
@@ -730,8 +731,8 @@
 
         <!--==================== TESTIMONIAL ====================-->
         <section class="testimonial section" id="testimonial">
-            <h2 class="section__title">Recomendações</h2>
-            <span class="section__subtitle">Profissionais e o que eles têm a dizer</span>
+            <h2 class="section__title" data-i18n="testimonial.title">Recomendações</h2>
+            <span class="section__subtitle" data-i18n="testimonial.subtitle">Profissionais e o que eles têm a dizer</span>
             
             <div class="testimonial__container container swiper-container">
                 <div class="swiper-wrapper">
@@ -760,7 +761,7 @@
                             </div>
                         </div>
 
-                        <p class="testimonial__description">
+                        <p class="testimonial__description" data-i18n="testimonial.text1">
                             Rafael é um profissional exemplar com quem tive a honra de trabalhar, 
                             tem ótimo domínio das ferramentas atuais de desenvolvimento web e 
                             sempre resolve os problemas de formas eficaz.
@@ -791,7 +792,7 @@
                             </div>
                         </div>
 
-                        <p class="testimonial__description">
+                        <p class="testimonial__description" data-i18n="testimonial.text2">
                             Além de um amigo que ganhei pra vida, um excelente professional. 
                             Sempre solicito, gentil e humilde, tendo uma paciência e um conhecimento 
                             que agregam no seu perfil pessoal e profissional. Entendedor de tecnologia, 
@@ -824,7 +825,7 @@
                             </div>
                         </div>
 
-                        <p class="testimonial__description">
+                        <p class="testimonial__description" data-i18n="testimonial.text3">
                             Rafael é um profissional com skills para desenvolvimento full-stack. Conhece algumas 
                             bibliotecas populosas e também tem conhecimento em frameworks de desenvolvimento 
                             back-end. Amplo conhecimento no front-end, tendo habilidades com HTML5, CSS3, 
@@ -843,8 +844,8 @@
 
         <!--==================== CONTACT ME ====================-->
         <section class="contact section" id="contact">
-            <h2 class="section__title">Contato</h2>
-            <span class="section__subtitle">Me mande uma mensagem</span>
+            <h2 class="section__title" data-i18n="contact.title">Contato</h2>
+            <span class="section__subtitle" data-i18n="contact.subtitle">Me mande uma mensagem</span>
             
             <div class="contact__container container grid">
                 <div>
@@ -854,8 +855,8 @@
                         <i class="uil uil-phone contact__icon"></i>
                         
                         <div>
-                            <h3 class="contact__title">Celular</h3>
-                            <span class="contact__subtitle"><a class="no_color_href" href="https://api.whatsapp.com/send/?phone=5561982750493&text=Olá%2C+peguei+seu+contato+através+do+seu+site&type=phone_number&app_absent=0">+55 61 98275-0493</a></span>
+                            <h3 class="contact__title" data-i18n="contact.phone">Celular</h3>
+                            <span class="contact__subtitle"><a class="no_color_href" data-i18n-href="contact.whatsappLink" href="https://api.whatsapp.com/send/?phone=5561982750493&text=Olá%2C+peguei+seu+contato+através+do+seu+site&type=phone_number&app_absent=0">+55 61 98275-0493</a></span>
                         </div>
                     </div>
 
@@ -867,7 +868,7 @@
                     
                     <div>
                         <h3 class="contact__title">E-mail</h3>
-                        <!--email_off--><span class="contact__subtitle"><a class="no_color_href" href="mailto:rafatocco7@gmail.com?subject=Contato%20-%20Seu%20nome&amp;body=Ol%C3%A1%2C%20peguei%20seu%20contato%20atrav%C3%A9s%20do%20seu%20site">rafatocco7@gmail.com</a></span><!--/email_off-->
+                        <!--email_off--><span class="contact__subtitle"><a class="no_color_href" data-i18n-href="contact.mailLink" href="mailto:rafatocco7@gmail.com?subject=Contato%20-%20Seu%20nome&amp;body=Ol%C3%A1%2C%20peguei%20seu%20contato%20atrav%C3%A9s%20do%20seu%20site">rafatocco7@gmail.com</a></span><!--/email_off-->
                     </div>
                 </div>
             </div>
@@ -881,7 +882,7 @@
             <div class="footer__container container grid">
                 <div>
                     <h1 class="footer__title">Rafael</h1>
-                    <span class="footer__subtitle">Desenvolvedor Full-Stack</span>
+                    <span class="footer__subtitle" data-i18n="role">Desenvolvedor Full-Stack</span>
                 </div>
 
 
@@ -900,8 +901,8 @@
                 </div>
             </div>
 
-            <p class="footer__copy">Última atualização: 17/06/2026</p>
-            <p class="footer__copy">&#169; Todos os direitos reservados.</p>
+            <p class="footer__copy" data-i18n="footer.updated">Última atualização: 18/10/2026</p>
+            <p class="footer__copy" data-i18n="footer.rights">&#169; Todos os direitos reservados.</p>
 
         </div>
 
@@ -914,6 +915,9 @@
 
     <!--==================== SWIPER JS ====================-->
     <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--==================== I18N JS ====================-->
+    <script src="assets/js/i18n.js"></script>
 
     <!--==================== MAIN JS ====================-->
     <script src="assets/js/main.js"></script>

@@ -100,6 +100,25 @@ body.dark-theme {
     color: var(--first-color);
 }
 
+.change-lang {
+    background: none;
+    border: none;
+    font-family: var(--body-font);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    color: var(--text-color-light);
+    margin-right: var(--mb-1);
+    cursor: pointer;
+}
+
+.change-lang:hover {
+    color: var(--title-color);
+}
+
+.change-lang .active-lang {
+    color: var(--first-color);
+}
+
 /*==================== BASE ====================*/
 * {
     box-sizing: border-box;
