@@ -44,6 +44,7 @@ const translations = {
         'skills.communication': 'Communication',
         'skills.speaking': 'Writing/Public Speaking',
         'skills.english': 'English',
+        'skills.spanish': 'Spanish',
 
         'journey.title': 'Journey',
         'journey.subtitle': 'My academic and professional journey',
@@ -53,9 +54,9 @@ const translations = {
         'journey.degree': "Computer Science (Bachelor's)",
         'journey.highschool': 'High School',
         'journey.english': 'English',
-        'journey.job1': 'Mid-level Application Developer',
-        'journey.job2': 'Junior Programmer Analyst',
-        'journey.job3': 'Administrative Assistant Intern',
+        'journey.job1': 'Mid-Level Software Developer',
+        'journey.job2': 'Junior Software Developer',
+        'journey.job3': 'Administrative Intern',
         'journey.current': '2021 - Present',
         'journey.onsite': 'Brasília/DF - Brazil (On-site)',
         'journey.hybrid': 'Brasília/DF - Brazil (Hybrid)',
@@ -99,7 +100,7 @@ const translations = {
         'contact.whatsappLink': 'https://api.whatsapp.com/send/?phone=5561982750493&text=Hi%2C+I+found+your+contact+on+your+website&type=phone_number&app_absent=0',
         'contact.mailLink': 'mailto:rafatocco7@gmail.com?subject=Contact%20-%20Your%20name&body=Hi%2C%20I%20found%20your%20contact%20on%20your%20website',
 
-        'footer.updated': 'Last updated: October 18, 2026',
+        'footer.updated': 'Last updated: October 28, 2026',
         'footer.rights': '&#169; All rights reserved.',
     },
 }
