@@ -17,7 +17,7 @@ const translations = {
         'nav.contact': 'Contact',
 
         'role': 'Full-Stack Developer',
-        'home.description': "I'm a 26-year-old developer born in Brasília, passionate about technology and always looking to grow, both personally and professionally.",
+        'home.description': "I'm from Brasília and have been building public-sector systems for over 6 years. Today I'm part of the Core Systems team at CAPES, focusing on Java/Spring Boot and Vue.js.",
         'home.cta': 'Get in touch',
 
         'about.title': 'About me',
@@ -26,21 +26,21 @@ const translations = {
         'about.description': 'Computer Scientist specialized in Artificial Intelligence, passionate about video games, sports and Gabi!',
         'about.companies': 'Companies <br> worked at',
         'about.years': 'Years of <br> experience',
-        'about.projects': 'Completed <br> projects',
+        'about.systems': 'Systems <br> maintained',
         'about.cv': 'Download CV',
         'about.cvFile': 'assets/pdf/Rafael_Toccolini_CV_Ingles.pdf',
 
         'skills.title': 'Skills',
         'skills.subtitle': 'Technologies and more',
         'skills.frontend.title': 'Frontend Developer',
-        'skills.frontend.subtitle': 'More than 5 years',
+        'skills.frontend.subtitle': 'More than 6 years',
         'skills.backend.title': 'Backend Developer',
-        'skills.backend.subtitle': 'More than 5 years',
+        'skills.backend.subtitle': 'More than 6 years',
         'skills.tools.title': 'Tools',
         'skills.tools.subtitle': 'Used daily',
         'skills.knowledge.title': 'Knowledge',
         'skills.knowledge.subtitle': 'For personal and professional use',
-        'skills.ai': 'Artificial Intelligence',
+        'skills.ai': 'Generative AI and Machine Learning',
         'skills.communication': 'Communication',
         'skills.speaking': 'Writing/Public Speaking',
         'skills.english': 'English',
@@ -52,7 +52,6 @@ const translations = {
         'journey.work': 'Work',
         'journey.postgrad': 'AI for Devs (Postgraduate)',
         'journey.degree': "Computer Science (Bachelor's)",
-        'journey.highschool': 'High School',
         'journey.english': 'English',
         'journey.job1': 'Mid-Level Software Developer',
         'journey.job2': 'Junior Software Developer',
@@ -100,7 +99,7 @@ const translations = {
         'contact.whatsappLink': 'https://api.whatsapp.com/send/?phone=5561982750493&text=Hi%2C+I+found+your+contact+on+your+website&type=phone_number&app_absent=0',
         'contact.mailLink': 'mailto:rafatocco7@gmail.com?subject=Contact%20-%20Your%20name&body=Hi%2C%20I%20found%20your%20contact%20on%20your%20website',
 
-        'footer.updated': 'Last updated: October 28, 2026',
+        'footer.updated': 'Last updated: October 31, 2026',
         'footer.rights': '&#169; All rights reserved.',
     },
 }
@@ -109,13 +108,14 @@ const translations = {
 const langButton = document.getElementById('lang-button')
 const langOptions = langButton.querySelectorAll('[data-lang]')
 const i18nAttrs = ['alt', 'content', 'href']
-const i18nElements = document.querySelectorAll(
-    ['[data-i18n]', ...i18nAttrs.map(attr => `[data-i18n-${attr}]`)].join(', ')
-)
+const i18nSelector = ['[data-i18n]', ...i18nAttrs.map(attr => `[data-i18n-${attr}]`)].join(', ')
+
+// Queried on every switch (not cached) so it also reaches the slides Swiper duplicates for its loop
+const getI18nElements = () => document.querySelectorAll(i18nSelector)
 
 // Save the original (Portuguese) texts so we can switch back to them
 translations.pt = {}
-i18nElements.forEach(el => {
+getI18nElements().forEach(el => {
     if (el.dataset.i18n) translations.pt[el.dataset.i18n] = el.innerHTML.trim()
     i18nAttrs.forEach(attr => {
         const key = el.getAttribute(`data-i18n-${attr}`)
@@ -126,7 +126,7 @@ i18nElements.forEach(el => {
 function setLanguage(lang) {
     const texts = translations[lang]
 
-    i18nElements.forEach(el => {
+    getI18nElements().forEach(el => {
         const key = el.dataset.i18n
         if (key && key in texts) el.innerHTML = texts[key]
 
