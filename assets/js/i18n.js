@@ -55,7 +55,7 @@ const translations = {
         'journey.english': 'English',
         'journey.job1': 'Mid-Level Software Developer',
         'journey.job2': 'Junior Software Developer',
-        'journey.job2Company': 'Stefanini Brazil · CFM&nbsp;·&nbsp;ANATEL',
+        'journey.job2Company': 'Stefanini Brazil<br>CFM · ANATEL',
         'journey.job3': 'Administrative Assistant',
         'journey.current': '2021 - Present',
         'journey.onsite': 'Brasília/DF - Brazil (On-site)',
