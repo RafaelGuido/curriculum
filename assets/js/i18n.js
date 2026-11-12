@@ -99,7 +99,7 @@ const translations = {
         'contact.whatsappLink': 'https://api.whatsapp.com/send/?phone=5561982750493&text=Hi%2C+I+found+your+contact+on+your+website&type=phone_number&app_absent=0',
         'contact.mailLink': 'mailto:rafatocco7@gmail.com?subject=Contact%20-%20Your%20name&body=Hi%2C%20I%20found%20your%20contact%20on%20your%20website',
 
-        'footer.updated': 'Last updated: November 11, 2026',
+        'footer.updated': 'Last updated: November 12, 2026',
         'footer.rights': '&#169; All rights reserved.',
     },
 }
